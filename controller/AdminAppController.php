@@ -15,9 +15,17 @@ class Admin{
 
             $product_name=$_POST['product_name'];
             $price=(float)$_POST['price'];
-            $img=$_POST['img'];
             $text=$_POST['text'];
             $categori=(integer)$_POST['categori'];
+
+            if($_FILES)
+            {
+                $path='../../media/'.$_FILES['img']['name'];
+               // $file=$pach.basename($_FILES['img']['name']);
+                //$getFile=getimagesize($_FILES['img']['tmp_name']);
+                move_uploaded_file($_FILES['img']['tmp_name'],$path);
+
+            }
             if($_POST['params'])
             {
                 $params=(float)$_POST['params'];
@@ -34,7 +42,7 @@ class Admin{
                 [
                     'product_name'=>$product_name,
                     'price'=>$price,
-                    'img'=>$img,
+                    'img'=>$path,
                     'text'=>$text,
                     'categori'=>$categori,
                     'params'=>$params
