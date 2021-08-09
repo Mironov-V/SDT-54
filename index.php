@@ -1,6 +1,7 @@
 <?php include "components/header.php"; ?>
 
 <main class="wrapper">
+<a href="admin/index.php"> панель администратора</a> 
         <div class="container-fluid">
             <div class="container">
                 <div class="row">
