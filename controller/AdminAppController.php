@@ -51,8 +51,21 @@ class Admin{
 
         }
     }
+        
+    function all_categories($p){ //
+        $connect = new PDO(
+            'mysql:host=localhost;dbname=std_54',
+             'root', 
+             '071452rdf'
+          );
+        //   print_r($connect->query("SELECT * FROM categories")->fetchAll(PDO::FETCH_ASSOC));
+        return $connect->query("SELECT * FROM {$p}")->fetchAll(PDO::FETCH_ASSOC);//вызываем тригер который возвращает все значения без передачи параметров
+    
+        
 
+    }
 
+    
     function new_categori(){
         if($_POST)
         {

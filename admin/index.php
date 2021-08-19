@@ -7,10 +7,10 @@
     <title>Панель администратора</title>
 </head>
 <body>
-    <a href="../index.php"> выйти на сайт</a>
+    <a href="../index"> выйти на сайт</a>
     <ul>
 
-        <li><a href="catalog/catalog.php">каталог</a>
+        <li><a href="catalog/catalog">каталог</a>
 
         </li> 
 

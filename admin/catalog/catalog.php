@@ -2,6 +2,8 @@
 require_once '../../controller/AdminAppController.php';
 $app=New Admin();
 $app->send_data();
+// $app->all_categories();
+
 ?>
 
 
@@ -14,38 +16,10 @@ $app->send_data();
     <title>Document</title>
 </head>
 <body>
-    <form method='POST' enctype='multipart/form-data'> <!--php прочитать  файл -->
-        <div>
-            <label>Наименование товара </label>
-            <input type="text" name="product_name" >
-        </div>
-        <div>
-            <label>Цена </label>
-            <input type="text" name="price" >
-        </div>
-        <div>
-            <label>Изображение </label>
-            <input type="file" name="img" >
-        </div>
-        <div>
-            <label>Описание </label>
-            <input type="text" name="text" >
-        </div>
-        <div>
-            <label>Параметры </label>
-            <input type="text" name="params" >
-        </div>
-        <div>
-            <label>Категория </label>
-            <select type="text" name="categori"  >
-                <option value="1">Ветро-гидро защита</option>
-            </select>
-        </div>
-        <button type='submit'>Отправить форму</button>
-
-
-
-    </form>
-     
+    <div class="">
+        <span>Заголовок</span>
+        <span>Описание </span>
+        <span>параметры</span>
+    </div>
 </body>
 </html>
