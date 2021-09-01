@@ -22,40 +22,40 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">SDT-54</a>
+                <a class="navbar-brand" href="index">SDT-54</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Акции</a>
+                            <a class="nav-link active" aria-current="page" href="index">Акции</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="catalog.php">Каталог</a>
+                            <a class="nav-link" href="catalog">Каталог</a>
                         </li>
                         <!-- <li class="nav-item">
-                            <a class="nav-link" href="admin.php">Админ</a>
+                            <a class="nav-link" href="admin">Админ</a>
                         </li> -->
                         <?php if (isset($_SESSION)): ?>
                             <?php if ( $_SESSION): ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="profile.php">Личный кабинет</a>
+                                    <a class="nav-link" href="profile">Личный кабинет</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="logout.php">Выход</a>
+                                    <a class="nav-link" href="logout">Выход</a>
                                 </li>
 
                             <?php else: ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="login.php">Войти</a>
+                                    <a class="nav-link" href="login">Войти</a>
                                 </li>
                             <?php endif; ?>
                         <?php endif; ?>
 
                         <!-- <li class="nav-item">
-                            <a class="nav-link" href="login.php">Войти</a>
+                            <a class="nav-link" href="login">Войти</a>
                         </li> -->
                     </ul>
                 </div>

@@ -21,7 +21,7 @@ class SignupForm
       $connect = new PDO(
         'mysql:host=localhost;dbname=STD_54',
          'root', 
-         'amritta31137117'
+         '071452rdf'
       );
 
       if (strlen($_POST['first_name']) > 0 && strlen($_POST['first_name']) <=25)// && !$_POST['last_name'] && !$_POST['username'] && !$_POST['password'] && !$_POST['password1'])
@@ -83,7 +83,7 @@ class LoginForm
     $connect = new PDO(
       'mysql:host=localhost;dbname=STD_54',
        'root', 
-       'amritta31137117'
+       '071452rdf'
     );
     if ($_POST){
       $email = $_POST['email'];
@@ -137,7 +137,7 @@ class QueryOrders
       $connect = new PDO(
         'mysql:host=localhost;dbname=STD_54',
          'root', 
-         'amritta31137117'
+         '071452rdf'
       );
       if (strlen($_POST['desk']) > 0){
         $query = $connect->prepare("INSERT INTO orders(user_id, title, desk) VALUES(:user_id, :title, :desk)");
