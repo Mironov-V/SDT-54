@@ -8,43 +8,42 @@
     // Проверка на то что пользователь авторизирован
     if (!$_SESSION['user'])
     {
-        header('location: index.php');
+        header('location: index');
     }
 ?>
-    <main class="wrapper">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-10 col-12 mx-auto">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                <p>
-                                    <b>
-                                    <?php echo $_SESSION['user']['last_name'].'  '.$_SESSION['user']['first_name']; ?>
-                                  </b>
-                                </p>
-                            </div>
-                            <div class="card-body">
-                                <h3>Оставить вопрос:</h3>
-                                <form method="POST">
 
-                                    <div class="mb-3">
-                                        <label class="form-label">Тема</label>
-                                        <select class="form-select" name="type" aria-label="Default select example">
-                                          <option value="Покупка">Покупка</option>
-                                          <option value="Доставка">Доставка</option>
-                                          <option value="Материал">Материал</option>
-                                        </select>
-                                        <br>
-                                        <textarea name="desk" class="form-control"></textarea>
-                                    </div>
+<main>
+        <div class="block mt-3">
+            <div class="block__container">
+                <h2 class="block__container-profile">
+                    <strong>
+                        <b>
+                            <?php echo $_SESSION['user']['last_name'].'  '.$_SESSION['user']['first_name']; ?>
+                        </b>
+                    </strong>
+                </h2>
+            </div>
+        </div>
 
-                                    <button type="submit" class="btn btn-primary">Отправить</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+        <div class="block mt-3">
+            <div class="block__container w-100 w-50 form">
+                <div class="block__container-text">
+                    <h3>Оставить вопрос</h3>
                 </div>
+                <form method="POST" class="block__container-question form__control w-100">
+                    <label>Тема:</label>
+                    <select class="w-100" name="type">
+                        <option value="Покупка">Покупка</option>
+                        <option value="Доставка">Доставка</option>
+                        <option value="Материал">Материал</option>
+                    </select>
+                    <div class="mt-3"></div>
+                    <textarea name="desk" class="w-100"></textarea>
+                    <div class="mt-3"></div>
+                    <div class="block__deley-elem">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

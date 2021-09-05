@@ -4,61 +4,95 @@
     
     // var_dump($_SESSION);
 ?>
+
 <!doctype html>
 <html lang="ru">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>STD-54</title>
+    <title>SDT-54</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index">SDT-54</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index">Акции</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalog">Каталог</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="admin">Админ</a>
-                        </li> -->
-                        <?php if (isset($_SESSION)): ?>
+
+
+    <header class="header ">
+        <div class="header__logo ">
+            <img class="header__logo-img " src="assets/image/лого.jpg " alt="SDT-54 ">
+        </div>
+
+        <div class="header__menu-mobile ">
+            <button id="menu" type="button">
+                <img src="assets/image/menu-button_icon-icons.com_72989 (1).svg " alt=" ">
+            </button>
+        </div>
+
+        <div class="header__menu ">
+            <nav class="header__menu-navigate ">
+
+                <ul class="navigate ">
+                    <li class="navigate__item ">
+                        <a class="navigate__item-link " href="index"><i class="fas fa-percentage "></i> Акции</a>
+                    </li>
+                    <li class="navigate__item ">
+                        <a class="navigate__item-link " href="catalog"><i class="fas fa-th-list "></i> Каталог</a>
+                    </li>
+                    <li class="navigate__item ">
+                        <a class="navigate__item-link " href="contact"><i class="fas fa-file-signature "></i> Контакты</a>
+                    </li>
+                    <?php if (isset($_SESSION)): ?>
                             <?php if ( $_SESSION): ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="profile">Личный кабинет</a>
+                                <li class="navigate__item ">
+                                    <a class="navigate__item-link " href="profile"><i class="fas fa-door-open "></i> Профиль</a>
                                 </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="logout">Выход</a>
+                                <li class="navigate__item ">
+                                    <a class="navigate__item-link " href="logout"><i class="fas fa-door-open "></i> Выход</a>
                                 </li>
-
-                            <?php else: ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="login">Войти</a>
+                            <?php else: ?>   
+                                <li class="navigate__item ">
+                                    <a class="navigate__item-link " href="login"><i class="fas fa-door-open "></i> Вход</a>
                                 </li>
                             <?php endif; ?>
-                        <?php endif; ?>
+                    <?php endif; ?>
+                </ul>
 
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="login">Войти</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
+
+    <!-- Мобильное меню -->
+    <section id="navigate" class="navigate">
+        <ul class="navigate__mobile">
+            <li class="navigate__mobile-item">
+                <a class="navigate__mobile-link" href="index"><i class="fas fa-percentage "></i> Акции</a>
+            </li>
+            <li class="navigate__mobile-item">
+                <a class="navigate__mobile-link" href="catalog"><i class="fas fa-th-list "></i> Каталог</a>
+            </li>
+            <li class="navigate__mobile-item">
+                <a class="navigate__mobile-link" href="contact"><i class="fas fa-file-signature "></i> Контакты</a>
+            </li>
+            <?php if (isset($_SESSION)): ?>
+                <?php if ( $_SESSION): ?>
+                    <li class="navigate__mobile-item">
+                        <a class="navigate__mobile-link" href="profile"><i class="fas fa-door-open "></i> Профиль</a>
+                    </li>
+                    <li class="navigate__mobile-item">
+                        <a class="navigate__mobile-link" href="logout"><i class="fas fa-door-open "></i> Выход</a>
+                    </li>
+                <?php else: ?> 
+                    <li class="navigate__mobile-item">
+                        <a class="navigate__mobile-link" href="login"><i class="fas fa-door-open "></i> Вход</a>
+                    </li>
+                <?php endif; ?>
+            <?php endif; ?>
+            
+        </ul>
+    </section>
+    <!-- END -->

@@ -45,7 +45,7 @@ select {
 }
 
 .header__logo-img {
-    max-width: 30%;
+    max-width: 100%;
 }
 
 .header__menu-navigate {

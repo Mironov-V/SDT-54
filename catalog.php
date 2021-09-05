@@ -1,61 +1,78 @@
 <?php include "components/header.php" ?>
-    <main class="wrapper">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="container"><br></div>
-                    <h2>Каталог:</h2>
-                    <hr>
-                    <!-- start -->
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <a href="show.html">
-                            <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                            <h4>
-                                <strong>Изоспан А (70m2)</strong>
-                            </h4>
-                            <br>
-                        </a>
-                    </div>
-                    <!-- end -->
+<main>
+        <h2 class="">Каталог</h2>
+        <div class="block d-b">
+            <div class="mt-3"></div>
+            <div class="mt-3"></div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                        <h4>
-                            <strong>Изоспан А (70m2)</strong>
-                        </h4>
+            <div class="block__mobileFilter">
+                <div class="block__mobileFilter-list">
+                    <a href="#">Ветро-гидро защита</a>
+                    <a href="#">Водосточная продукция</a>
+                    <a href="#">Водосточная продукция ПРЕМИУМ</a>
+                    <a href="#">Доборные элементы</a>
+                    <a href="#">Метеллочерепица</a>
+                    <a href="#">Профнастил</a>
+                </div>
+            </div>
+
+            <div class="block__catalog">
+                <div class="mt-3 block__catalog-lists">
+                    <!-- START FOR -->
+                    <a href="show">
+                        <div class="block__catalog-item card">
+                            <div class="card__container">
+                                <!-- Изображение товара -->
+                                <div class="card__container-image">
+                                    <img src="https://github.com/Mironov-V/SDT-54/blob/main/media/400.jpg?raw=true" alt="Заголовок">
+                                </div>
+                                <div class="card__container-title">Заголовок</div>
+                                <div class="card__container-deskription">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laboriosam reprehenderit iusto! Suscipit totam dicta modi atque. Nesciunt, architecto. Nihil facilis iste commodi eius maxime delectus. Fugit ad saepe iste!
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END FOR -->
+                </div>
+                    
+
+                <div class="block__filter">
+                    <ul class="block__filter-list">
+                        <h2>
+                            <b>
+                                Категории:
+                            </b>
+                        </h2>
                         <br>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                        <h4>
-                            <strong>Изоспан А (70m2)</strong>
-                        </h4>
+                        <li>
+                            <a href="#">Ветро-гидро защита</a>
+                        </li>
                         <br>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                        <h4>
-                            <strong>Изоспан А (70m2)</strong>
-                        </h4>
+                        <li>
+                            <a href="#">Водосточная продукция</a>
+                        </li>
                         <br>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                        <h4>
-                            <strong>Изоспан А (70m2)</strong>
-                        </h4>
+                        <li>
+                            <a href="#">Водосточная продукция ПРЕМИУМ</a>
+                        </li>
                         <br>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                        <img class="img-fluid" src="http://a0565961.xsph.ru/wp-content/uploads/2021/04/izospan-a2-324x164.jpg" alt="">
-                        <h4>
-                            <strong>Изоспан А (70m2)</strong>
-                        </h4>
+                        <li>
+                            <a href="#">Доборные элементы</a>
+                        </li>
                         <br>
-                    </div>
+                        <li>
+                            <a href="#">Метеллочерепица</a>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="#">Профнастил</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </main>
+    
 
     <?php include "components/footer.php" ?>

@@ -44,7 +44,7 @@ class SignupForm
                   ]
                 );
 
-                return header('location: login.php');
+                return header('location: login');
               } else {
                 echo '<div class="alert alert-danger" role="alert">
                       Пароли не соответствуют друг другу!
@@ -108,7 +108,7 @@ class LoginForm
           if ($data['email'] == $email && $data['password'] == $password){  
             // Создание точки входа пользователя
             $_SESSION['user'] = $data;
-            return header('location: profile.php');
+            return header('location: profile');
             
           } else {
             echo '* не правильный логин или пароль.';
