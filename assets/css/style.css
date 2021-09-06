@@ -21,6 +21,25 @@ a {
     text-decoration: none;
 }
 
+select {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+tr {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
 ul li {
     list-style: none;
 }
@@ -28,6 +47,24 @@ ul li {
 select {
     display: block;
     height: 2em;
+}
+
+#update_btn {
+    background-color: #67d459;
+    border: none;
+    padding: 0.4em;
+    font-weight: bold;
+    border-radius: 0.4em;
+    color: #222;
+}
+
+#delete_btn {
+    background-color: #d45959;
+    border: none;
+    padding: 0.4em;
+    font-weight: bold;
+    border-radius: 0.4em;
+    color: #222;
 }
 
 .header {
@@ -45,7 +82,7 @@ select {
 }
 
 .header__logo-img {
-    max-width: 30%;
+    max-width: 100%;
 }
 
 .header__menu-navigate {
@@ -338,6 +375,67 @@ select {
 
 /* END */
 
+
+/* ADMIN */
+
+.block__container {
+    width: 100%;
+}
+
+.block__container-admin_catalog {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.block__container-add_catalog button {
+    background: #57f143;
+    float: right;
+    border: none;
+    padding: 0.5em;
+    width: 12%;
+    border-radius: 0.5em;
+    margin-bottom: 3em;
+}
+
+.block__container-add_catalog button:hover {
+    background: #32dd1c;
+}
+
+
+/* Add catalog */
+
+.block__container-add form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.block__container-add label {
+    font-weight: bold;
+}
+
+.block__container-add input,
+.block__container-add textarea {
+    width: 100%;
+    display: block;
+    margin-top: 0.6em;
+    border: solid 2px #1d5862;
+    padding: 0.5em;
+}
+
+.block__container-add input[type="file"] {
+    border: none;
+    margin-bottom: 2em;
+}
+
+.block__container-add form button[type="submit"] {
+    border: none;
+    padding: 0.7em;
+    border-radius: 0.3em;
+    background-color: #53f758;
+    font-weight: bold;
+    color: #272626;
+}
+
 @media(min-width: 1200px) {
     section.navigate {
         display: none;
@@ -484,6 +582,12 @@ select {
     .d-b {
         display: block!important;
     }
+    .block__container-admin_catalog {
+        width: 100%;
+    }
+    .block__container-add_catalog button {
+        width: 24%;
+    }
 }
 
 @media (max-width: 650px) {
@@ -582,6 +686,13 @@ select {
     }
     .d-b {
         display: block!important;
+    }
+    .block__container-add form {
+        width: 90%;
+    }
+    .block__container-add input,
+    .block__container-add textarea {
+        width: 100%;
     }
 }
 
@@ -684,6 +795,13 @@ select {
     }
     .d-b {
         display: block!important;
+    }
+    .block__container-add form {
+        width: 90%!important;
+    }
+    .block__container-add input,
+    .block__container-add textarea {
+        width: 100%!important;
     }
 }
 

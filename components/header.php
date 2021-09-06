@@ -24,7 +24,7 @@
 
     <header class="header ">
         <div class="header__logo ">
-            <img class="header__logo-img " src="assets/image/лого.jpg " alt="SDT-54 ">
+            <img class="header__logo-img " src="assets/image/Image20210825230039.png" alt="SDT-54 ">
         </div>
 
         <div class="header__menu-mobile ">

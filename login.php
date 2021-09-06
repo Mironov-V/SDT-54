@@ -75,5 +75,5 @@
             </form>
         </section>
     </main>
-    
+    <script src="assets\js\function.js"></script>
 <?php include "components/footer.php"; ?>
