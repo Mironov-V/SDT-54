@@ -17,7 +17,7 @@ $app->update();
 
                         <div>
                             <label>Заголовок</label>
-                            <input type="text" name="price" value="<?php echo $params[0]['price'] ?>">
+                            <input type="text" name="product_name" value="<?php echo $params[0]['product_name'] ?>">
                         </div>
 
                         <div>

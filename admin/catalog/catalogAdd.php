@@ -46,10 +46,7 @@ $app->send_data();
                         <label>Изображение </label>
                         <input type="file" name="img" >
                     </div>
-                    <div >
-                        <label>Параметры </label>
-                        <input type="text" name="params" >
-                    </div>
+                   
                     <div > 
                         <label>Категория </label>
                         <select type="text" name="categori"  >

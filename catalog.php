@@ -1,3 +1,9 @@
+<?php
+require_once "controller/AppController.php";
+$app=new Catalog();
+$app->ViewAll();
+var_dump($app);
+?>
 <?php include "components/header.php" ?>
 <main>
         <h2 class="">Каталог</h2>

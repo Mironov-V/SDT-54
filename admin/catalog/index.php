@@ -1,3 +1,10 @@
+<?php
+require_once '../../controller/AdminAppController.php';
+$app=New Admin();
+$app->send_data();
+
+
+?>
 <?php require_once '../header_admin.php'; ?>
 
     <main>

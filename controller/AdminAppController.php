@@ -52,6 +52,7 @@ class Admin{
                     'params'=>$params
                 ]
             );
+            return header('location: index');
 
         }
     }
@@ -162,8 +163,9 @@ class Admin{
                     ]
                 );
             }
-            
+            return header('location: index');
            }
+
 
         // if ($img === $data[0]['img']){
         //     // ...
@@ -178,6 +180,7 @@ class Admin{
         // }
 
         if ($_FILES){
+
             $img = $this->file_save();
 
             $query = $connect->prepare("UPDATE products SET img=:img WHERE id=:id");
@@ -187,7 +190,11 @@ class Admin{
                     "img" => $img
                 ]
             );
+            return header('location: index');
         }
+
+       
+
         
        }
 
@@ -215,6 +222,34 @@ class Admin{
         }
     }
     
+    function del_product(){
+        if ($_GET){
+            $product_id = (integer)$_GET['id'];  //Идентификатор продукта
+
+            $connect = new PDO(
+                'mysql:host=localhost;dbname=std_54',
+                    'root', 
+                    '071452rdf'
+                );
+                $data=$connect->prepare("SELECT * FROM products WHERE id=?");
+                $data->execute(
+                    [
+                        $product_id
+                    ]
+                );
+                // Переопределение старой переменной
+                $data = $data->fetchAll();
+
+                $query = $connect->prepare("DELETE FROM products WHERE id=:id");
+                $query->execute(
+                    [
+                        "id" => $product_id
+                    ]
+                );
+                return header('location: index');
+
+        }
+    }
 
 }
 ?>

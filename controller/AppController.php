@@ -6,12 +6,14 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', '1');
 
 
-$host = 'localhost';
-$user = 'root';
-$password = 'amritta31137117';
-$db_name = 'STD_54';
+//отображает все данные в каталоге и по категориям
+class Catalog
+{
+  function ViewAll()
+  {
 
-
+  }
+}
 
 
 class SignupForm
